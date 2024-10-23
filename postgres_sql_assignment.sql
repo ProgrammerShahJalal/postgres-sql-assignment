@@ -109,3 +109,44 @@ UPDATE students
 
 -- SELECT * FROM students;
 
+
+--  Query 4:
+-- Delete all courses that have no students enrolled.
+
+DELETE FROM courses
+WHERE course_id NOT IN(
+    SELECT DISTINCT course_id
+    FROM enrollment
+);
+
+-- Query 5:
+-- Retrieve the names of students using a limit of 2, starting from the 3rd student.
+
+SELECT student_name 
+FROM students ORDER BY student_id 
+LIMIT 2 
+OFFSET 2;
+
+
+-- Query 6:
+-- Retrieve the course names and the number of students enrolled in each course.
+SELECT c.course_name, COUNT(e.student_id) AS student_enrolled
+FROM courses c
+    LEFT JOIN enrollment e USING (course_id)
+GROUP BY
+    c.course_name;
+
+
+
+-- Query 7:
+-- Calculate and display the average age of all students.
+
+SELECT ROUND(AVG(age), 2) AS average_age 
+FROM students
+
+-- Query 8:
+-- Retrieve the names of students whose email addresses contain 'example.com'
+
+SELECT student_name 
+ FROM students
+ WHERE email ILIKE '%example.com%';
