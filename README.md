@@ -20,3 +20,18 @@ CREATE TABLE orders (
     customer_id INT REFERENCES customers(id)
 );
 ```
+
+## 2. What is the difference between the VARCHAR and CHAR data types?
+
+- **VARCHAR**: Stores variable-length character strings, optimizing storage for varying text lengths.
+- **CHAR**: Stores fixed-length character strings, requiring a predefined maximum length. If the data is shorter, it fills in the extra space with blank spaces.
+
+## 3. Explain the purpose of the WHERE clause in a SELECT statement.
+
+The WHERE clause filters records when querying data. It allows us to get only the rows that meet a condition.
+
+Example:
+
+```sql
+SELECT * FROM products WHERE price > 100;
+```
