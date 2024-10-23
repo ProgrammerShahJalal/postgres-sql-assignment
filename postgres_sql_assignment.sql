@@ -63,3 +63,26 @@ INSERT INTO enrollment (student_id, course_id) VALUES
 (1, 2),
 (2, 1),
 (3, 2);
+
+-- cheking students, courses, enrollment (after inserting data)
+-- SELECT * FROM students;
+-- SELECT * FROM courses;
+-- SELECT * FROM enrollment;
+
+
+-- query: 1
+-- Insert a new student record with the following details:
+
+-- Name: YourName
+-- Age: YourAge
+-- Email: YourEmail
+-- Frontend-Mark: YourMark
+-- Backend-Mark: YourMark
+-- Status: NULL
+
+INSERT INTO 
+students (student_name, age, email, frontend_mark, backend_mark, status) VALUES
+('Md Shah Jalal', 25, 'shah.jalal.ju.bd@gmail.com', 98, 99, NULL);
+
+-- SELECT * FROM students;
+
