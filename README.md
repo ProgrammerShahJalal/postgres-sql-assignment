@@ -106,3 +106,7 @@ Example:
 CREATE VIEW active_customers AS
 SELECT * FROM customers WHERE active = true;
 ```
+
+## License
+
+All rights reserved by **Md Shah Jalal**.
